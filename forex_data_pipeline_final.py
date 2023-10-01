@@ -1,13 +1,13 @@
 import airflow
 from airflow import DAG
-from airflow.contrib.sensors.file_sensor import FileSensor
-from airflow.sensors.http_sensor import HttpSensor
-from airflow.operators.bash_operator import BashOperator
-from airflow.operators.python_operator import PythonOperator
-from airflow.operators.hive_operator import HiveOperator
-from airflow.contrib.operators.spark_submit_operator import SparkSubmitOperator
-from airflow.operators.email_operator import EmailOperator
-from airflow.operators.slack_operator import SlackAPIPostOperator
+from airflow.sensors.filesystem import FileSensor
+from airflow.providers.http.sensors.http import HttpSensor
+from airflow.operators.bash import BashOperator
+from airflow.operators.python import PythonOperator
+from airflow.providers.apache.hive.operators.hive import HiveOperator
+from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
+from airflow.operators.email import EmailOperator
+from airflow.providers.slack.operators.slack_webhook import SlackWebhookOperator
 from datetime import datetime, timedelta
 
 import csv
