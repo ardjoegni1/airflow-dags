@@ -124,7 +124,7 @@ with DAG(dag_id="forex_data_pipeline_final", schedule_interval="@daily", default
     # Sending a notification by Slack message
     # TODO: Improvements - add on_failure for tasks
     # https://medium.com/datareply/integrating-slack-alerts-in-airflow-c9dcd155105
-    sending_slack_notification = SlackAPIPostOperator(
+    sending_slack_notification = SlackWebhookOperator(
         task_id="sending_slack",
         token="xoxp-753801195270-740121926339-751642514144-8391b800988bed43247926b03742459e",
         username="airflow",
