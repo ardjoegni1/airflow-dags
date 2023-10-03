@@ -3,7 +3,8 @@ import airflow
 from airflow import DAG, macros
 from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
-from airflow.operators.postgres import PostgresOperator
+from airflow.providers.apache.postgres.operators.postgres import PostgresOperator
+#from airflow.operators.postgres import PostgresOperator
 from datetime import datetime, timedelta
 
 # Would be cleaner to add the path to the PYTHONPATH variable
