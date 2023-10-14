@@ -20,6 +20,8 @@ from airflow.utils.edgemodifier import Label
 # Used to determine the day of the week
 from airflow.utils.weekday import WeekDay
 
+from typing import List
+
 
 """
 This DAG is intended to demonstrate a number of core Apache Airflow concepts that are central to the pipeline
